@@ -1,17 +1,30 @@
-<section>
-    <h1>El juego de las parejas</h1>
-    <label for="cardoption4">
-        <input type="checkbox" id="cardoption4" value="choosecard" name="cardoptions" />
-        4
-    </label>
-    <label for="cardoption6">
-        <input type="checkbox" id="cardoption6" value="choosecard" name="cardoptions" />
-        6
-    </label>
-    <label for="cardoption8">
-        <input type="checkbox" id="cardoption8" value="choosecard" name="cardoptions" />
-        8
-    </label>
-    <button>comenzar</button>
-
+<section class="cards">
+    <div>
+        <h1>El juego de las parejas</h1>
+        <form>
+            <label for="cardsoption4">
+                <input type="radio" id="cardoption4" value="4" name="cardoptions" />
+                4
+            </label>
+            <label for="cardsoption6">
+                <input type="radio" id="cardoption6" value="6" name="cardoptions" />
+                6
+            </label>
+            <label for="cardsoption8">
+                <input type="radio" id="cardoption8" value="8" name="cardoptions" />
+                8
+            </label>
+            <button class="cards__button js-button">comenzar</button>
+        </form>
+    </div>
+    <div class="cardgame js-game">
+        <div class="card1"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+        <div class="card4"></div>
+        <div class="card5"></div>
+        <div class="card6"></div>
+        <div class="card7"></div>
+        <div class="card8"></div>
+    </div>
 </section>
