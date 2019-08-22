@@ -1,0 +1,15 @@
+.cardoptions{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 60px;
+    &__title{
+        font-size: 45px;
+    }
+    &__choose{
+        font-size: 20px;
+    }
+    &__button{
+        font-size: 20px;
+    }
+}
