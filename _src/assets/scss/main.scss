@@ -1,4 +1,55 @@
-@import 'layout/header';
-.cards{
-	background-color: aqua;
+@import "layout/header";
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  background-color: aqua;
+}
+.card__options {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 60px;
+  font-family: "Courier New", Courier, monospace;
+  &__title {
+    font-size: 45px;
+  }
+  &__choose {
+    font-size: 20px;
+  }
+  &__button {
+    font-size: 20px;
+  }
+}
+
+.hola {
+  width: 120px;
+  height: 200px;
+  background-repeat: no-repeat;
+
+  background-image: url("https://via.placeholder.com/160x195/30d9c4/ffffff/?text=ADALAB");
+}
+
+.cardgame__list__item {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  //   display: grid;
+  //   grid-template-columns: repeat(8, 1fr);
+  //   grid-template-rows: 1fr 1fr;
+  //   grid-row-gap: 10px;
+  //   grid-column-gap: 20px;
+  padding: 40px;
+  border-radius: 40px;
+  &__img {
+    width: 120px;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid lightblue;
+  }
+}
+
+.hidden {
+  display: none;
 }
