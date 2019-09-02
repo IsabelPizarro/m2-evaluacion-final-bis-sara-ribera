@@ -4,6 +4,25 @@ const button = document.querySelector('.js-button');
 const optionCard = document.querySelectorAll('.js-radio');
 const cardList = document.querySelector('.js-list');
 
+let selectedInput = 4;
+const putInLocalStorage = () => {
+  localStorage.setItem('selected-input', selectedInput);
+  putInLocalStorage ();
+};
+
+
+const selectOption = ev => {
+  selectedInput = parseInt (ev.currentTarget.value);
+  putInLocalStorage ();
+};
+
+const selectedItem = () => {
+  for(const selected of optionCard) {
+    selected. addEventListener ('click', selectOption);
+  }
+};
+selectedItem ();
+
 function getCardSelected() {
   for (let i = 0; i < optionCard.length; i++) {
     if (optionCard[i].checked) {
@@ -12,7 +31,6 @@ function getCardSelected() {
   }
 }
 
-
 function dataFromServer() {
   event.preventDefault();
   const number = getCardSelected();
@@ -20,8 +38,9 @@ function dataFromServer() {
   fetch(`https://raw.githubusercontent.com/Adalab/cards-data/master/${number}.json`)
     .then(response => response.json())
     .then(cards => {
+
       createList(cards);
-    })
+    });
 
 }
 
@@ -35,17 +54,15 @@ function createList(cards) {
     createListElement.classList.add('card');
     createListElement.style.backgroundImage = urlDefaultImage;
 
-
     cardList.appendChild(createListElement);
     createListElement.addEventListener('click', function () {
       if (createListElement.style.backgroundImage === urlDefaultImage) {
         createListElement.style.backgroundImage = `url('${cards[i].image}')`;
-        
+
       }
-    })
+    });
   }
 }
-
 
 button.addEventListener('click', dataFromServer);
 

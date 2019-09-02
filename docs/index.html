@@ -3,19 +3,36 @@
     
     <head>
         <meta charset="UTF-8">
-        <title>Adalab Web Starter Kit</title>
-        <link rel="icon" href="favicon.png" />
-        <link rel="stylesheet" href="assets/css/main.css">
+        <title>Módulo 2- Evaluación Final Bis</title>
+        <link rel="icon" href="favicon.png"
+        />
+        <link rel="stylesheet" href="../assets/css/main.css">
     </head>
     
     <body>
         <div class="page">
-            <header class="page__header">Header</header>
-            <main class="page__main">Main</main> <a class="link__adalab" href="https://adalab.es" target="_blank">Adalab</a>
-
-            <a
-            class="link__github" href="https://github.com" target="_blank">GitHub</a>
+            <header class="header">El juego de las parejas</header>
+            <section class="cards">
+                <div class="card__options">
+                    <form class="card__options__choose">
+                        <label for="cardoption4">
+                            <input class="js-radio" type="radio" id="cardoption4" value="4" name="cardoptions"
+                            />4</label>
+                        <label for="cardoption6">
+                            <input class="js-radio" type="radio" id="cardoption6" value="6" name="cardoptions"
+                            />6</label>
+                        <label for="cardoption8">
+                            <input class="js-radio" type="radio" id="cardoption8" value="8" name="cardoptions"
+                            />8</label>
+                        <button class="cardoptions__button js-button">comenzar</button>
+                    </form>
+                </div>
+            </section>
+            <section class="cardgame">
+                <ul class="cardgame__list js-list"></ul>
+            </section>
         </div>
+        <script src="../assets/js/main.js"></script>
     </body>
 
 </html>
